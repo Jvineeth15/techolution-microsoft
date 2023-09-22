@@ -4,11 +4,19 @@ import brackets from '../../../static/download.svg'
 import { useState } from "react";
 import { useEffect } from "react";
 import Layout from "../../components/layout";
+import {hamburger} from '../../../static/hamburger.png'
 
 export default function Home() {
     const [isAtTop, setIsAtTop] = useState(true);
-
+    const [openHam, setHam] = useState(false)
     
+    const handleHamburger = () => {
+      setHam(!openHam)
+      if(openHam){
+        alert(openHam)
+      }
+    }
+
     useEffect(() => {
         const checkScrollPosition = () => {
             if (window.scrollY === 0) {
@@ -53,23 +61,58 @@ export default function Home() {
                     <h4>on microsoft partner</h4>
                 </div>
                 <div className="cards-container">
-                    <div className="card">
+                    <div onClick={handleHamburger} className="card" style={{position:'relative'}}>
+                      <div style={{position:'absolute', top:"5%",left:"5%"}}>
+                        <svg viewBox="0 0 100 80" width="15" height="20">
+                          <rect width="100" height="10"></rect>
+                          <rect y="30" width="100" height="10"></rect>
+                          <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                      </div>
                     <img class="card-image" src="https://cdn.sanity.io/images/nlg69nbd/production/d777cbbdc546a1c5349243b2386b56d3a295ecde-61x50.svg" alt="image_cocreate" />
                     <p class="card-text">Enterprise Cloud Foundation</p>
                     </div>
-                    <div className="card">
+                    <div onClick={handleHamburger} className="card" style={{position:'relative'}}>
+                    <div style={{position:'absolute', top:"5%",left:"5%"}}>
+                        <svg viewBox="0 0 100 80" width="15" height="20">
+                          <rect width="100" height="10"></rect>
+                          <rect y="30" width="100" height="10"></rect>
+                          <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                      </div>
                     <img class="card-image" src="https://cdn.sanity.io/images/nlg69nbd/production/17216cdc38b17cbc1d479ba9005f850a682434b2-61x53.svg" alt="image_cocreate" />
                     <p class="card-text">Cloud Migration</p>
                     </div>
-                    <div className="card">
+                    <div onClick={handleHamburger} className="card" style={{position:'relative'}}>
+                    <div style={{position:'absolute', top:"5%",left:"5%"}}>
+                        <svg viewBox="0 0 100 80" width="15" height="20">
+                          <rect width="100" height="10"></rect>
+                          <rect y="30" width="100" height="10"></rect>
+                          <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                      </div>
                     <img class="card-image" src="https://cdn.sanity.io/images/nlg69nbd/production/c804c42b54533fb2529e53e840aa4397106209fb-61x50.svg" alt="image_cocreate" />
                     <p class="card-text">Cloud Security</p>
                     </div>
-                    <div className="card">
+                    <div onClick={handleHamburger} className="card" style={{position:'relative'}}>
+                    <div style={{position:'absolute', top:"5%",left:"5%"}}>
+                        <svg viewBox="0 0 100 80" width="15" height="20">
+                          <rect width="100" height="10"></rect>
+                          <rect y="30" width="100" height="10"></rect>
+                          <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                      </div>
                     <img class="card-image" src="https://cdn.sanity.io/images/nlg69nbd/production/aa790fc3f9e04f490b2b6941c2e913a6ee52107d-61x51.svg" alt="image_cocreate" />
                     <p class="card-text">360° Governance</p>
                     </div>
-                    <div className="card">
+                    <div onClick={handleHamburger} className="card" style={{position:'relative'}}>
+                    <div style={{position:'absolute', top:"5%",left:"5%"}}>
+                        <svg viewBox="0 0 100 80" width="15" height="20">
+                          <rect width="100" height="10"></rect>
+                          <rect y="30" width="100" height="10"></rect>
+                          <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                      </div>
                     <img class="card-image" src="https://cdn.sanity.io/images/nlg69nbd/production/68c2a2142c4015a982cb418f02d11e5ad627caa7-61x50.svg" alt="image_cocreate" />
                     <p class="card-text">Enterprise Data Management</p>
                     </div>
