@@ -11,10 +11,7 @@ export default function Home() {
     const [openHam, setHam] = useState(false)
     
     const handleHamburger = () => {
-      setHam(!openHam)
-      if(openHam){
-        alert(openHam)
-      }
+      
     }
 
     useEffect(() => {
