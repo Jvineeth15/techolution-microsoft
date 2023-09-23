@@ -71,7 +71,8 @@ main > section > div {
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 53rem;
+    min-width: 43rem;
+    max-width: 45vw;
     position: absolute;
 }
 
@@ -178,27 +179,27 @@ box-shadow: 11px 23px 27px 3px rgb(232, 232, 232);
 
 
 
-#section-5 div{
+#section-5 .main-5{
     display: flex;
     /* flex-wrap: wrap; */
-    justify-content: flex-end;
-    align-items: center;
+    /* justify-content: flex-start; */
+    align-items: end;
     /* background-color: #333; */
-    /* flex-direction: row; */
+    flex-direction: row;
 }
-/* .contents-footer{
+.contents-footer{
     width: 99vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
-} */
+    /* background-color: #333; */
+}
 .blocks{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     /* background-color: #333; */
 }
 .locations .places{
@@ -211,10 +212,12 @@ box-shadow: 11px 23px 27px 3px rgb(232, 232, 232);
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: max-content;
+    /* background-color: #97d2a6; */
 }
 
 
-@media screen and (max-width: 1070px){   
+@media screen and (max-width: 1240px){   
     #section-5 img{
         display: none;
     }
@@ -224,20 +227,9 @@ main > section > div{
     margin-top: 5rem;
 }
 }
+
 @media screen and (max-width: 1200px){
-    main{
-        height: auto;
-        scroll-snap-type: none;
-    }
-    main > section{
-        height: auto;
-        scroll-snap-align: none;
-        scroll-snap-stop: none;
-    }
-    main > section > div{
-        height: auto;
-    }
-    #section-1{
+    section{
         margin-top: 3rem;
         text-align: center;
         padding: 0 2rem 2rem 2rem;
@@ -258,11 +250,46 @@ main > section > div{
         width: 80%;
     }
     }
-@media screen and (max-width: 716px){   
+@media screen and (max-width: 850px){
+    .header{
+        font-size: 3.5vw;
+    }
+    .para p{
+        font-size: 3.17vw;
+    }
+    .buttons{
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+    .para img{
+        min-width: 90vw;
+    }
+    .cards-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 936px){   
     #section-5 div{
         justify-content: flex-start;
         align-items: start;
         flex-direction: column;
+    }
+    .places, .blocks{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 610px){   
+    .card{
+        width: 22vw;
+        height: 22vw;
+        border-radius: 1vw;
+    }
+    .card img{
+        width: 10vw;
+    }
+    .card p{
+        font-size: 2vw;
     }
 }
 

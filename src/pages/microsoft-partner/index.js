@@ -179,7 +179,7 @@ export default function Home() {
             </div>
         </section>
         <section id="section-5">
-            <div>
+            <div className="main-5">
                 <div className="contents-footer">
                 <div className="blocks locations">
                     <h3>Locations</h3>
